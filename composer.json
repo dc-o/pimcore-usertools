@@ -1,0 +1,28 @@
+{
+  "name": "dc-o/pimcore-usertools",
+  "type": "pimcore-bundle",
+  "description": "User tools for pimcore 11",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Korbinian Ober",
+      "email": "korbinian@dc-o.de"
+    }
+  ],
+  "require": {
+    "pimcore/pimcore": ">=11.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DCO\\UserTools\\": "src/"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "DCO\\UserTools\\UserToolsBundle"
+      ]
+    }
+  }
+}

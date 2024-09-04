@@ -1,0 +1,13 @@
+imports:
+    - { resource: ./services.yaml }
+
+pimcore:
+    models:
+        class_overrides:
+            'Pimcore\Model\DataObject\User': 'DCO\UserTools\Model\User'
+    security:
+        password_hasher_factories:
+            DCO\UserTools\Model\User: usertools.security.password_hasher_factory
+framework:
+    session:
+        name: 'GEBRAUCHTMARKT_SESSION'

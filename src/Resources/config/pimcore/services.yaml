@@ -1,0 +1,9 @@
+services:
+    usertools.security.user_provider:
+        class: Pimcore\Security\User\ObjectUserProvider
+        arguments: ['DCO\UserTools\Model\User', 'email']
+    usertools.security.password_hasher_factory:
+        class: Pimcore\Security\Hasher\Factory\UserAwarePasswordHasherFactory
+        arguments:
+            - Pimcore\Security\Hasher\PasswordFieldHasher
+            - ['password']
