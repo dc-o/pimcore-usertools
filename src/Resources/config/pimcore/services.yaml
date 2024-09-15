@@ -7,3 +7,6 @@ services:
         arguments:
             - Pimcore\Security\Hasher\PasswordFieldHasher
             - ['password']
+    DCO\UserTools\Command\:
+        resource: '../../../Command'
+        tags: ['console.command']
